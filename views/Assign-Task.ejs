@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table  border="1">
+        <th>ID</th>
+        <th>Staff-Name</th>
+        <th>Staff-Email</th>
+        <th>Task-Name</th>
+        <th>Start-Date</th>
+        <th>End-Date</th>
+        <th>Accept-Task</th>
+        <th>Denied-Task</th>
+    
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td><%=data.id%></td>
+                <td><%=data.name%></td>
+                <td><%=data.email%></td>
+                <td><%=data.taskname%></td>
+                <td><%=data.sdate%></td>
+                <td><%=data.edate%></td>
+                <td><button><a href="/Accept-Task/<%=data.id%>">Accept</a></button></td>
+                <td><button><a href="/Denied-Task/<%=data.id%>">Denied</a></button></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

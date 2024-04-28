@@ -1,0 +1,17 @@
+<table  border="1">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Post</th>
+
+    <% result.forEach(function(data) { %>
+        <tr>
+            <td><%=data.id%></td>
+            <td><%=data.name%></td>
+            <td><%=data.email%></td>
+            <td><%=data.password%></td>
+            <td><%=data.post%></td>
+        </tr>
+    <% }); %>
+</table>

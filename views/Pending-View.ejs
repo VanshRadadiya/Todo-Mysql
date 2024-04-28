@@ -1,0 +1,25 @@
+<table  border="1">
+    <th>ID</th>
+    <th>Staff-Name</th>
+    <th>Staff-Email</th>
+    <th>Task-Name</th>
+    <th>Start-Date</th>
+    <th>End-Date</th>
+    <th>Status</th>
+    <th>Running</th>
+    <th>Completed/th>
+
+    <% result.forEach(function(data) { %>
+        <tr>
+            <td><%=data.id%></td>
+            <td><%=data.name%></td>
+            <td><%=data.email%></td>
+            <td><%=data.taskname%></td>
+            <td><%=data.sdate%></td>
+            <td><%=data.edate%></td>
+            <td><%=data.status%></td>
+            <td><button><a href="/Running-Task/<%=data.id%>">Running</a></button></td>
+            <td><button><a href="/Completed-Task/<%=data.id%>">Completed</a></button></td>
+        </tr>
+    <% }); %>
+</table>

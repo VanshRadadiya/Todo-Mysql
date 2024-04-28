@@ -1,0 +1,30 @@
+<form method="post">
+    <table border="1">
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td>Enter Staff Name:</td>
+                <td><input type="text" name="name" value="<%= data.name%>"></td>
+            </tr>
+            <tr>
+                <td>Enter Staff Email:</td>
+                <td><input type="email" name="email" value="<%= data.email%>"></td>
+            </tr>
+            <tr>
+                <td>Enter Task Name :</td>
+                <td><input type="text" name="taskname" value="<%= data.taskname%>"></td>
+            </tr>
+            <tr>
+                <td>Enter Starting Date :</td>
+                <td><input type="date" name="sdate" value="<%= data.sdate%>"></td>
+            </tr>
+            <tr>
+                <td>Enter Ending Date :</td>
+                <td><input type="date" name="edate" value="<%= data.edate%>"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+            <% }); %>
+    </table>
+</form>

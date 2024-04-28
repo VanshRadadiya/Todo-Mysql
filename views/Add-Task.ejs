@@ -1,0 +1,28 @@
+<form method="post">
+    <table border="1">
+        <tr>
+            <td>Enter Staff Name With ID :</td>
+            <td><select name="email">
+                <% result.forEach(function(data) { %>
+                    <option value="<%=data.email%>"><%=data.email%></option>
+                <% }); %>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Enter Task Name :</td>
+            <td><input type="text" name="taskname"></td>
+        </tr>
+        <tr>
+            <td>Enter Starting Date :</td>
+            <td><input type="date" name="sdate"></td>
+        </tr>
+        <tr>
+            <td>Enter Ending Date :</td>
+            <td><input type="date" name="edate"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+    </table>
+</form>
